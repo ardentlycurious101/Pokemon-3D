@@ -26,6 +26,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         
         // Create a session configuration
@@ -38,6 +39,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             configuration.maximumNumberOfTrackedImages = 1
             
             print("Image successfully added.")
+            
         }
 
         // Run the view's session
