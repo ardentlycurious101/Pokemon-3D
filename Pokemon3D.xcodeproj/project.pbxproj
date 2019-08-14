@@ -11,19 +11,19 @@
 		EA322B8223034E3C007F0E1A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EA322B8123034E3C007F0E1A /* art.scnassets */; };
 		EA322B8423034E3C007F0E1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA322B8323034E3C007F0E1A /* ViewController.swift */; };
 		EA322B8723034E3C007F0E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA322B8523034E3C007F0E1A /* Main.storyboard */; };
-		EA322B8923034E3D007F0E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA322B8823034E3D007F0E1A /* Assets.xcassets */; };
 		EA322B8C23034E3D007F0E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA322B8A23034E3D007F0E1A /* LaunchScreen.storyboard */; };
+		EAB87504230492010002D16D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB87503230492010002D16D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA322B7C23034E3C007F0E1A /* Pokemon3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA322B7F23034E3C007F0E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA322B8123034E3C007F0E1A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		EA322B8323034E3C007F0E1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA322B8623034E3C007F0E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EA322B8823034E3D007F0E1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA322B8B23034E3D007F0E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA322B8D23034E3D007F0E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAB875022304914F0002D16D /* Pokemon3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB87503230492010002D16D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,26 +41,18 @@
 			isa = PBXGroup;
 			children = (
 				EA322B7E23034E3C007F0E1A /* Pokemon3D */,
-				EA322B7D23034E3C007F0E1A /* Products */,
+				EAB875022304914F0002D16D /* Pokemon3D.app */,
 			);
-			sourceTree = "<group>";
-		};
-		EA322B7D23034E3C007F0E1A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA322B7C23034E3C007F0E1A /* Pokemon3D.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		EA322B7E23034E3C007F0E1A /* Pokemon3D */ = {
 			isa = PBXGroup;
 			children = (
+				EAB87503230492010002D16D /* Assets.xcassets */,
 				EA322B8123034E3C007F0E1A /* art.scnassets */,
 				EA322B7F23034E3C007F0E1A /* AppDelegate.swift */,
 				EA322B8323034E3C007F0E1A /* ViewController.swift */,
 				EA322B8523034E3C007F0E1A /* Main.storyboard */,
-				EA322B8823034E3D007F0E1A /* Assets.xcassets */,
 				EA322B8A23034E3D007F0E1A /* LaunchScreen.storyboard */,
 				EA322B8D23034E3D007F0E1A /* Info.plist */,
 			);
@@ -84,7 +76,7 @@
 			);
 			name = Pokemon3D;
 			productName = Pokemon3D;
-			productReference = EA322B7C23034E3C007F0E1A /* Pokemon3D.app */;
+			productReference = EAB875022304914F0002D16D /* Pokemon3D.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +103,7 @@
 				Base,
 			);
 			mainGroup = EA322B7323034E3C007F0E1A;
-			productRefGroup = EA322B7D23034E3C007F0E1A /* Products */;
+			productRefGroup = EA322B7323034E3C007F0E1A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -127,7 +119,7 @@
 			files = (
 				EA322B8223034E3C007F0E1A /* art.scnassets in Resources */,
 				EA322B8C23034E3D007F0E1A /* LaunchScreen.storyboard in Resources */,
-				EA322B8923034E3D007F0E1A /* Assets.xcassets in Resources */,
+				EAB87504230492010002D16D /* Assets.xcassets in Resources */,
 				EA322B8723034E3C007F0E1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

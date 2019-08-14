@@ -6,6 +6,9 @@
   "resources" : [
     {
       "filename" : "bulbasaur-card.arreferenceimage"
+    },
+    {
+      "filename" : "jigglypuff-card.arreferenceimage"
     }
   ]
 }

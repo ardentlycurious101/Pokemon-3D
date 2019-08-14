@@ -32,13 +32,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARImageTrackingConfiguration()
+        let configuration = ARWorldTrackingConfiguration()
         
         if let imageToTrack = ARReferenceImage.referenceImages(inGroupNamed: "Pokemon Cards", bundle: Bundle.main) {
             
-            configuration.trackingImages = imageToTrack
+            configuration.detectionImages = imageToTrack
             
-            configuration.maximumNumberOfTrackedImages = 1
+            configuration.maximumNumberOfTrackedImages = 2
             
             print("Image successfully added.")
             
@@ -59,32 +59,54 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         let node = SCNNode()
-        
-        if let imageAnchor = anchor as? ARImageAnchor {
-            
-            let plane = SCNPlane(
-                width: imageAnchor.referenceImage.physicalSize.width,
-                height: imageAnchor.referenceImage.physicalSize.height
-            )
-            
-            plane.firstMaterial?.diffuse.contents = UIColor(white: 1.0, alpha: 0.5)
-            let planeNode = SCNNode(geometry: plane)
-            planeNode.eulerAngles.x = -(Float.pi/2)
-            
-            node.addChildNode(planeNode)
-            
-            if let pokeScene = SCNScene(named: "art.scnassets/bulbasaur.scn") {
+        DispatchQueue.main.async {
+            if let imageAnchor = anchor as? ARImageAnchor {
                 
-                if let pokeNode = pokeScene.rootNode.childNodes.first {
-                    pokeNode.eulerAngles.x = .pi/2
-                    planeNode.addChildNode(pokeNode)
+                print(imageAnchor.referenceImage.name!)
+                
+                let plane = SCNPlane(
+                    width: imageAnchor.referenceImage.physicalSize.width,
+                    height: imageAnchor.referenceImage.physicalSize.height
+                )
+                
+                plane.firstMaterial?.diffuse.contents = UIColor(white: 1.0, alpha: 0.5)
+                let planeNode = SCNNode(geometry: plane)
+                planeNode.eulerAngles.x = (Float.pi/2)
+                
+                node.addChildNode(planeNode)
+                
+                if imageAnchor.referenceImage.name == "jigglypuff-card" {
+
+                    if let pokeScene = SCNScene(named: "art.scnassets/jigglypuff.scn") {
+
+                        if let pokeNode = pokeScene.rootNode.childNodes.first {
+
+                            //  pokeNode.eulerAngles.x = -.pi/2
+                            planeNode.addChildNode(pokeNode)
+
+                        }
+
+                    }
+                    
+                }
+                
+                if imageAnchor.referenceImage.name == "bulbasaur-card" {
+                    
+                    if let pokeScene = SCNScene(named: "art.scnassets/bulbasaur.scn") {
+                        
+                        if let pokeNode = pokeScene.rootNode.childNodes.first {
+                            
+                            pokeNode.eulerAngles.x = -.pi/2
+                            planeNode.addChildNode(pokeNode)
+                            
+                        }
+                        
+                    }
                     
                 }
                 
             }
-            
         }
-        
         return node
     }
 }
