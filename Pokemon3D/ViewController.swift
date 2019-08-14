@@ -58,8 +58,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+       
         let node = SCNNode()
+        
         DispatchQueue.main.async {
+            
             if let imageAnchor = anchor as? ARImageAnchor {
                 
                 print(imageAnchor.referenceImage.name!)
@@ -107,6 +110,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 
             }
         }
+        
         return node
+        
     }
 }
