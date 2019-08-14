@@ -56,8 +56,8 @@
 		EA322B7E23034E3C007F0E1A /* Pokemon3D */ = {
 			isa = PBXGroup;
 			children = (
-				EA322B7F23034E3C007F0E1A /* AppDelegate.swift */,
 				EA322B8123034E3C007F0E1A /* art.scnassets */,
+				EA322B7F23034E3C007F0E1A /* AppDelegate.swift */,
 				EA322B8323034E3C007F0E1A /* ViewController.swift */,
 				EA322B8523034E3C007F0E1A /* Main.storyboard */,
 				EA322B8823034E3D007F0E1A /* Assets.xcassets */,
